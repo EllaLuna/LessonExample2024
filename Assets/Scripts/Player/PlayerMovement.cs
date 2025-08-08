@@ -8,7 +8,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
     [SerializeField] float speed = 10f;
     Vector2 direction;
-    string[] str;
     [SerializeField] Animator animator;
     SpriteRenderer spriteRenderer;
     float jumpForce = 8;
@@ -42,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = direction * speed * Time.deltaTime;     
+        rb.linearVelocity = speed * direction;     
     }
 
     enum InputStr
