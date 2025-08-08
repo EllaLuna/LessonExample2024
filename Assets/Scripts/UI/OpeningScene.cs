@@ -20,4 +20,10 @@ public class OpeningScene : MonoBehaviour
     {
         SceneManager.LoadScene(startGameSceneName);
     }
+
+    [ContextMenu("Blab")]
+    public void Print()
+    {
+        Debug.Log("The issue is the SO");
+    }
 }

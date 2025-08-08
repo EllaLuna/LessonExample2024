@@ -15,4 +15,4 @@ MonoBehaviour:
   targetName: Super Duper
   reward: 10
   penalty: -10
-  sprite: {fileID: 7145198348311737387, guid: f73dfe034c22cfc41bd7e8799020a5ac, type: 3}
+  sprite: {fileID: -4986890610287934012, guid: 274d64617113287499ed1c4165d1d8f3, type: 3}
