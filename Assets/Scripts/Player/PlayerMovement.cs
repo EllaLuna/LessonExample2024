@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = direction * speed * Time.deltaTime;     
+        rb.linearVelocity = direction * speed * Time.deltaTime;     
     }
 
     enum InputStr

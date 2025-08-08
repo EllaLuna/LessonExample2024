@@ -17,7 +17,7 @@ public class GameState : MonoBehaviour
 
     private void Start()
     {
-        gameStateChannel = FindObjectOfType<Beacon>().gameStateChannel;
+        gameStateChannel = FindFirstObjectByType<Beacon>().gameStateChannel;
 
         foreach (var transition in GetComponentsInChildren<TransitionBase>())
         {

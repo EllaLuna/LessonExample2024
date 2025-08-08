@@ -15,7 +15,7 @@ public class Menu : MonoBehaviour
 
     private void Start()
     {
-        gameStateChannel = FindObjectOfType<Beacon>().gameStateChannel;
+        gameStateChannel = FindFirstObjectByType<Beacon>().gameStateChannel;
         gameStateChannel.StateEnter += StateEntered;
 
         returnButton.onClick.AddListener(() =>
@@ -28,8 +28,8 @@ public class Menu : MonoBehaviour
 
     private void AssignNamedActionTransition()
     {
-        var transitions = FindObjectsOfType<NamedActionTransition>();
-        var buttons = FindObjectsOfType<Button>(true).ToList();
+        var transitions = FindObjectsByType<NamedActionTransition>(FindObjectsSortMode.None);
+        var buttons = FindObjectsByType<Button>(FindObjectsInactive.Include, FindObjectsSortMode.None).ToList();
         foreach (var transition in transitions)
         {
             var selectedButton = buttons.FirstOrDefault(x => x.name.Equals(transition.ActionName));

@@ -14,7 +14,7 @@ public class GameStateManager : MonoBehaviour
 
     void Start()
     {
-        var beacon = FindObjectOfType<Beacon>();
+        var beacon = FindFirstObjectByType<Beacon>();
         gameStateChannel = beacon.gameStateChannel;
         gameStateChannel.StateEnter += StateEnter;
         gameStateChannel.GetCurrentState += GetCurrentState;

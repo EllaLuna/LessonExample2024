@@ -6,7 +6,7 @@ public class InstantiateManagers : MonoBehaviour
 
     void Awake()
     {
-        var managers = FindObjectOfType<Managers>();
+        var managers = FindFirstObjectByType<Managers>();
         if (managers == null)
         {
             Instantiate(managersPrefab);

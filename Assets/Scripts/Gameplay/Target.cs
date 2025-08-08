@@ -13,7 +13,7 @@ public class Target : MonoBehaviour
 
     private void Start()
     {
-        var beacon = FindObjectOfType<Beacon>();
+        var beacon = FindFirstObjectByType<Beacon>();
         scoreChannel = beacon.scoreChannel;
 
         GetComponent<SpriteRenderer>().sprite = targetInfo.sprite;

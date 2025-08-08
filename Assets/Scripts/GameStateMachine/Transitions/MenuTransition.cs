@@ -13,7 +13,7 @@ public class MenuTransition : TransitionBase
     protected override void Awake()
     {
         base.Awake();
-        gameStateChannel = FindObjectOfType<Beacon>().gameStateChannel;
+        gameStateChannel = FindFirstObjectByType<Beacon>().gameStateChannel;
         gameStateChannel.StateEnter += StateEnter;
     }
 

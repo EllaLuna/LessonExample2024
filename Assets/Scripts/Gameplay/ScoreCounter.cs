@@ -12,7 +12,7 @@ public class ScoreCounter : MonoBehaviour
 
     void Start()
     {
-        var beacon = FindObjectOfType<Beacon>();
+        var beacon = FindFirstObjectByType<Beacon>();
         scoreChannel = beacon.scoreChannel;
         scoreChannel.UpdateScore += UpdateScore;
     }
